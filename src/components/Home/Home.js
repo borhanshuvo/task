@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="container py-5">
       <div className="row py-5">
-        <div className="col-md-3">
+        <div className="col-md-3 border-end">
           <>
             <Sidebar setActive={setActive} active={active} />
           </>
