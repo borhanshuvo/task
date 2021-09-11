@@ -4,22 +4,26 @@ const CardView = ({ data, handelClick }) => {
   return (
     <>
       <div className="col-md-4 pb-4">
-        <div
-          className="card box-shadow border-radius h-100 cursor-pointer"
-          data-bs-toggle="modal"
-          data-bs-target={`#post${data.id}`}
-        >
+        <div className="card box-shadow border-radius h-100 cursor-pointer">
           <div className="text-end">
             <button
               className="btn-close bg-white p-2"
               onClick={() => handelClick(data.id)}
             ></button>
           </div>
-          <div className="card-body h-100">
+          <div
+            className="card-body h-100"
+            data-bs-toggle="modal"
+            data-bs-target={`#post${data.id}`}
+          >
             <h6 className="text-capitalize">{data.title}</h6>
             <p className="text-capitalize">{data.body}</p>
           </div>
-          <div className="p-3">
+          <div
+            className="p-3"
+            data-bs-toggle="modal"
+            data-bs-target={`#post${data.id}`}
+          >
             <img
               src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg"
               className="img-fluid border-radius"
