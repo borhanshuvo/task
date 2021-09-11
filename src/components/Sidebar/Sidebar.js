@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ setActive, active }) => {
   return (
     <>
       <div className="bg-white my-2 py-2 px-2 box-shadow border-radius">
@@ -23,7 +23,11 @@ const Sidebar = () => {
       <div className="bg-white my-4 py-2 px-2 box-shadow border-radius">
         <h5 className="text-center">View Toggle</h5>
         <div className="text-center">
-          <div className="d-inline-block w-50 active py-3 px-1 cursor-pointer">
+          <div
+            className={`d-inline-block w-50 py-3 px-1 cursor-pointer ${
+              active === 'card' && "active"
+            }`}
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -34,6 +38,7 @@ const Sidebar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
               style={{ height: "40px", width: "40px" }}
+              onClick={() => setActive('card')}
             >
               <path
                 fill="currentColor"
@@ -41,7 +46,11 @@ const Sidebar = () => {
               ></path>
             </svg>
           </div>
-          <div className="d-inline-block w-50 active py-3 px-1 cursor-pointer">
+          <div
+            className={`d-inline-block w-50 py-3 px-1 cursor-pointer ${
+              active === 'list' && "active"
+            }`}
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -52,6 +61,7 @@ const Sidebar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
               style={{ height: "40px", width: "40px" }}
+              onClick={() => setActive('list')}
             >
               <path
                 fill="currentColor"
