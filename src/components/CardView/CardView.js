@@ -16,8 +16,8 @@ const CardView = ({ data, handelClick }) => {
             data-bs-toggle="modal"
             data-bs-target={`#post${data.id}`}
           >
-            <h6 className="text-capitalize">{data.title}</h6>
-            <p className="text-capitalize">{data.body}</p>
+            <h6 className="text-capitalize">{data.title.slice(0,40)} ...</h6>
+            <p className="text-capitalize">{data.body.slice(0,40)} ...</p>
           </div>
           <div
             className="p-3"

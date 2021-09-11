@@ -20,11 +20,11 @@ const ListView = ({ data, handelClick }) => {
             </div>
             <div>
               <h6 className="text-capitalize">{data.title}</h6>
-              <p className="text-capitalize">{data.body}</p>
+              <p className="text-capitalize">{data.body.slice(0,110)} ...</p>
             </div>
           </div>
         </div>
-        <div className="ps-5">
+        <div className="ps-5">  
           <div className="bg-white p-2 rounded-circle box-shadow">
             <button
               className="btn-close bg-white"
